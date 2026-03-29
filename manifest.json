@@ -1,0 +1,79 @@
+{
+  "manifest_version": 3,
+  "name": "LeetCode IntelliSense",
+  "version": "1.0.0",
+  "description": "Brings full VS Code style IntelliSense and autocomplete to LeetCode's Monaco editor.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": ["*://leetcode.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["*://leetcode.com/*"],
+      "js": [
+        "src/providers/base.js", 
+        "src/providers/python.js",
+        "src/providers/java.js",
+        "src/providers/cpp.js",
+        "src/providers/javascript.js",
+        "src/engine/snippets.js", 
+        "src/engine/inference.js", 
+        "src/engine/linter.js",
+        "src/engine/spellchecker.js",
+        "src/engine/codesnap.js",
+        "src/engine/confetti.js",
+        "src/engine/complexity.js",
+        "src/engine/timer.js",
+        "src/engine/templates.js",
+        "src/engine/history.js",
+        "src/engine/controls.js",
+        "src/engine/fahhhify.js",
+        "src/engine/draggable.js",
+        "src/engine/core.js", 
+        "src/content/ui.js", 
+        "src/content/input.js", 
+        "src/content/main.js"
+      ],
+      "css": ["assets/styles.css"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["*://leetcode.com/*"],
+      "js": ["src/content/monaco-hook.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "background": {
+    "service_worker": "src/background/background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+          "src/content/monaco-hook.js",
+          "assets/audio/*.mp3", "assets/audio/*.wav",
+          "assets/sound/*.mp3", "assets/sound/*.wav",
+          "assets/sounds/*.mp3", "assets/sounds/*.wav",
+          "audio/*.mp3", "audio/*.wav",
+          "sound/*.mp3", "sound/*.wav",
+          "sounds/*.mp3", "sounds/*.wav",
+          "sounds/engyclick-sound-effects-of-fireworks-diwali-celebration-421220.mp3"
+      ],
+      "matches": ["*://leetcode.com/*"]
+    }
+  ],
+  "action": {
+    "default_title": "LeetCode IntelliSense",
+    "default_icon": {
+      "16": "assets/icon.png",
+      "48": "assets/icon.png",
+      "128": "assets/icon.png"
+    }
+  },
+  "icons": {
+    "16": "assets/icon.png",
+    "48": "assets/icon.png",
+    "128": "assets/icon.png"
+  }
+}
