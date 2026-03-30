@@ -16,7 +16,8 @@ window.LCSpellChecker = {
         'import', 'export', 'default', 'const', 'let', 'var', 'async', 'await', 'node', 'tree',
         'graph', 'vert', 'edge', 'left', 'right', 'root', 'dummy', 'head', 'tail', 'temp', 'tmp',
         'collections', 'math', 'heapq', 'bisect', 'itertools', 'deque', 'popleft', 'appendleft',
-        'print', 'len', 'range', 'enumerate', 'zip', 'sum', 'min', 'max', 'sorted'
+        'print', 'len', 'range', 'enumerate', 'zip', 'sum', 'min', 'max', 'sorted',
+        'isBadVersion', 'guess', 'master', 'mountainArray', 'ListNode', 'TreeNode', 'Node'
     ]),
     initialized: false,
 

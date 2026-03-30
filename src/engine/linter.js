@@ -14,7 +14,9 @@ window.LCLinter = {
         const decls = new Set([
             'self', 'List', 'Optional', 'TreeNode', 'ListNode', 'int', 'str', 'float', 'bool', 'dict', 'set', 'tuple',
             'collections', 'math', 'heapq', 'bisect', 'itertools', 'deque', 'Counter', 'defaultdict', 
-            'True', 'False', 'None'
+            'True', 'False', 'None',
+            // LeetCode specific Globals/APIs
+            'isBadVersion', 'guess', 'master', 'Node', 'mountainArray', 'NodeList'
         ]);
         
         const builtins = [
